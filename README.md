@@ -1,5 +1,5 @@
 # ReconMerge
-ReconMerge é uma ferramenta de linha de comando em Python projetada para realizar a enumeração de subdomínios de forma eficiente.A ferramenta combina métodos ativos (força bruta com DNS assíncrono) e passivos (consulta a fontes públicas de dados) para mapear a superfície de ataque de um domínio alvo.
+ReconMerge é uma ferramenta de linha de comando em Python projetada para realizar a enumeração de subdomínios de forma eficiente. A ferramenta combina métodos ativos (força bruta com DNS assíncrono) e passivos (consulta a fontes públicas de dados) para mapear a superfície de ataque de um domínio alvo.
 
 ## Funcionalidades
 Enumeração Ativa (Força Bruta Asíncrona):
