@@ -3,7 +3,7 @@ import socket
 import time
 import asyncio
 import dns.asyncresolver
-from pycrtsh import Crtsh
+from crtsh import crtshAPI
 import requests
 
 parser = argparse.ArgumentParser(prog="ReconMerge", description="")
@@ -63,10 +63,9 @@ sub_list = []
 
 def crt(domain):
 	try:
-		c = Crtsh()
-		sub = c.subdomains(domain)
-		for subdomains in sub:
-			sub_list.append(subdomains)
+		sub = crtshAPI().search(domain)
+		for sub in subdomains:
+			sub_list.append(sub["name_value"])
 	except Exception as e:
 		print(f"❌ Erro ao consultar crt.sh: Falha de conexão ou erro: {e}")
 
