@@ -1,2 +1,2 @@
-pycrtsh>=0.3.13
+crtsh>=1.1.0
 requests>=2.32.5
