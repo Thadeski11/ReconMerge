@@ -63,7 +63,7 @@ sub_list = []
 
 def crt(domain):
 	try:
-		sub = crtshAPI().search(domain)
+		subdomains = crtshAPI().search(domain)
 		for sub in subdomains:
 			sub_list.append(sub["name_value"])
 	except Exception as e:
