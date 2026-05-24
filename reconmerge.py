@@ -62,8 +62,13 @@ async def run_check_subdomain():
 sub_list = []
 
 def crt(domain):
+	subdomains = ''
+	attempts = 0
 	try:
-		subdomains = crtshAPI().search(domain)
+		while not subdomains and attempts < 10:
+			subdomains = crtshAPI().search(domain)
+			attempts += 1
+			time.sleep(5)
 		for sub in subdomains:
 			sub_list.append(sub["name_value"])
 	except Exception as e:
